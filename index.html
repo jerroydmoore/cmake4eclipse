@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Cmake4eclipse by 15knots</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Cmake4eclipse</h1>
+        <h2>Let CMake generate the buildscripts for Eclipse</h2>
+        <a href="https://github.com/15knots/cmake4eclipse" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction</h1>
+
+<p>This Eclipse plugin generates buildscripts for the Eclipse CDT manged build system from CMake scripts.</p>
+
+<h1>
+<a id="why-cmake4eclipse" class="anchor" href="#why-cmake4eclipse" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why cmake4eclipse?</h1>
+
+<p>Blindly invoked, CMake will generate makefiles (or other build scripts) inside the source tree, cluttering it with lots of files and directories that have to be fleed out from version control: This practice might be ok for simple hello-world-projects, but for larger projects, the CMake developers recommend <em>You</em> to set up a separate directory for building the source.</p>
+
+<p>Annoyingly, these recommended out-of-source-builds impose some tedious tasks on Your co-workers who check out the code and just want to build it:</p>
+
+<ol>
+<li>leave eclipse workbench,</li>
+<li>manually fire up a command-line shell,</li>
+<li>manually create a directory for the out-of-source-build,</li>
+<li>manually change the CWD to that directory,</li>
+<li>manually invoke cmake, telling it to generate build scripts, which kind of build scripts you want and where source source files live,</li>
+<li>re-enter eclipse workbench, configure the checked out project to use the generated buildscripts.</li>
+</ol>
+
+<p><strong>Cmake4eclipse</strong> aims to address these tasks: Co-workers can just check out the source and have all the tedious tasks automated.</p>
+
+<h1>
+<a id="installation-instructions" class="anchor" href="#installation-instructions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation Instructions</h1>
+
+<p><strong>cmake4eclipse</strong> can be installed into an existing Eclipse installation using the "Install New Software..." dialog and entering the update site URL listed below.</p>
+
+<h2>
+<a id="update-site" class="anchor" href="#update-site" aria-hidden="true"><span class="octicon octicon-link"></span></a>Update Site</h2>
+
+<p>This composite update site contains the latest release as well as selected older releases.
+<a href="https://cmake4eclipsecdt.googlecode.com/git/releng/comp-update/">https://cmake4eclipsecdt.googlecode.com/git/releng/comp-update/</a></p>
+
+<hr>
+
+<h2>
+<a id="latest-release" class="anchor" href="#latest-release" aria-hidden="true"><span class="octicon octicon-link"></span></a>Latest Release</h2>
+
+<p>1.3.1 (2015-01-21)</p>
+
+<h3>
+<a id="repository-url" class="anchor" href="#repository-url" aria-hidden="true"><span class="octicon octicon-link"></span></a>Repository URL</h3>
+
+<p><code>jar:https://googledrive.com/host/0B-QU1Qnto3huZUZ0QUdxM01pR0U/cmake4eclipsecdt-1.3.1.zip!/</code></p>
+
+<h3>
+<a id="system-requirements" class="anchor" href="#system-requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>System Requirements</h3>
+
+<p>CDT v 8.1.0 or higher and Eclipse v 3.8.0 (Juno) or higher</p>
+
+<hr>
+
+<h2>
+<a id="archived-releases" class="anchor" href="#archived-releases" aria-hidden="true"><span class="octicon octicon-link"></span></a>Archived Releases</h2>
+
+<p>These releases are made available as a zipped p2 repository. To install, use the "Install New Software..." menu and paste the appropriate repository URL from below into the "Work with" input field.</p>
+
+<h3>
+<a id="130-2014-12-20" class="anchor" href="#130-2014-12-20" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.3.0 (2014-12-20)</h3>
+
+<h4>
+<a id="repository-url-1" class="anchor" href="#repository-url-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Repository URL</h4>
+
+<p><code>jar:https://googledrive.com/host/0B-QU1Qnto3huZUZ0QUdxM01pR0U/cmake4eclipsecdt-1.3.0.zip!/</code></p>
+
+<h4>
+<a id="system-requirements-1" class="anchor" href="#system-requirements-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>System Requirements</h4>
+
+<p>CDT v 8.1.0 or higher and Eclipse v 3.8.0 (Juno) or higher</p>
+
+<h3>
+<a id="110--120201404092022-2014-04-09" class="anchor" href="#110--120201404092022-2014-04-09" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.1.0 / 1.2.0.201404092022 (2014-04-09)</h3>
+
+<h4>
+<a id="repository-url-2" class="anchor" href="#repository-url-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Repository URL</h4>
+
+<p><code>jar:https://googledrive.com/host/0B-QU1Qnto3huZUZ0QUdxM01pR0U/cmake4eclipsecdt-1.1.0.zip!/</code></p>
+
+<h4>
+<a id="system-requirements-2" class="anchor" href="#system-requirements-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>System Requirements</h4>
+
+<p>CDT v 8.1.0 or higher
+Eclipse v 3.8.0 (Juno) or higher</p>
+
+<h3>
+<a id="100-2014-03-07" class="anchor" href="#100-2014-03-07" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.0.0 (2014-03-07)</h3>
+
+<h4>
+<a id="repository-url-3" class="anchor" href="#repository-url-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Repository URL</h4>
+
+<p><code>jar:https://googledrive.com/host/0B-QU1Qnto3huZUZ0QUdxM01pR0U/cmake4eclipsecdt-1.0.0.zip!/</code></p>
+
+<h4>
+<a id="system-requirements-3" class="anchor" href="#system-requirements-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>System Requirements</h4>
+
+<p>CDT v 8.1.0 or higher<br>
+Eclipse v 3.8.0 (Juno) or higher<br>
+<br></p>
+
+<hr>
+
+<h2>
+<a id="older-releases" class="anchor" href="#older-releases" aria-hidden="true"><span class="octicon octicon-link"></span></a>Older Releases</h2>
+
+<p>Other revisions can be found at <a href="https://googledrive.com/host/0B-QU1Qnto3huZUZ0QUdxM01pR0U/"></a><a href="https://googledrive.com/host/0B-QU1Qnto3huZUZ0QUdxM01pR0U/">https://googledrive.com/host/0B-QU1Qnto3huZUZ0QUdxM01pR0U/</a> .<br>
+Do not forget to add the trailing <b>!/</b> to the repository URL!<br></p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/15knots/cmake4eclipse/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/15knots/cmake4eclipse/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/15knots/cmake4eclipse"></a> is maintained by <a href="https://github.com/15knots">15knots</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-48794993-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
