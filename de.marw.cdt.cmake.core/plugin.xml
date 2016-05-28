@@ -200,4 +200,19 @@
           label="cmake">
     </keyword>
  </extension>
+ <extension
+       point="org.eclipse.ui.newWizards">
+    <wizard
+          category="org.eclipse.cdt.ui.newCWizards"
+          class="de.marw.cdt.cmake.core.ui.NewProjectFromCmakelistsWizard"
+          id="de.marw.cdt.cmake.core.NewProjectFromCmakelistsWizard"
+          name="C/C++ Project with existing CMake script"
+          project="true">
+       <description>
+          Create a new C/C++ project configured to use an existing CMake script for build script generation
+       </description>
+    </wizard>
+ </extension>
+ <!--
+ -->
 </plugin>
