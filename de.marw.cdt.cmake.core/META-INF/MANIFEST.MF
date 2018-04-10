@@ -7,7 +7,7 @@ Bundle-SymbolicName: de.marw.cdt.cmake.core;singleton:=true
 Bundle-Version: 1.10.0.qualifier
 Bundle-Vendor: Martin Weber
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Import-Package: org.eclipse.cdt.core,
  org.eclipse.cdt.core.cdtvariables,
@@ -42,5 +42,8 @@ Import-Package: org.eclipse.cdt.core,
  org.osgi.framework
 Bundle-Activator: de.marw.cdt.cmake.core.CdtPlugin
 Export-Package: de.marw.cdt.cmake.core,
- de.marw.cdt.cmake.core.cmakecache
-Require-Bundle: org.eclipse.ui
+ de.marw.cdt.cmake.core.cmakecache,
+ de.marw.cdt.cmake.core.internal,
+ de.marw.cdt.cmake.core.internal.settings
+Require-Bundle: org.eclipse.ui,
+ org.junit

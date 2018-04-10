@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.cdt.managedbuilder.core.buildDefinitions">
+      <managedBuildRevision
+            fileVersion="4.0.0">
+      </managedBuildRevision>
+      <builder
+            autoBuildTarget="all"
+            buildRunner="jnmoore.cmake.DockerBuildRunner"
+            buildfileGenerator="jnmoore.cmake.DockerizedBuildscriptGenerator"
+            cleanBuildTarget="clean"
+            command="make"
+            commandLauncher="jnmoore.cmake.DockerCommandLauncher"
+            errorParsers="org.eclipse.cdt.core.MakeErrorParser"
+            id="jnmoore.cmake.dockerizedbuilder"
+            ignoreErrCmd="-k"
+            incrementalBuildTarget="all"
+            name="CMake Builder (GNU Make) in a Docker Container"
+            parallelBuildCmd="-j*"
+            parallelBuildOn="true"
+            parallelizationNumber="unlimited">
+      </builder>
+    </extension>
+
+</plugin>

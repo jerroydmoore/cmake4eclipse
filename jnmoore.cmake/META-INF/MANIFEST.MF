@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Dockerfy cmake4eclipse
+Bundle-SymbolicName: jnmoore.cmake;singleton:=true
+Bundle-Version: 1.1.0.qualifier
+Bundle-Activator: jnmoore.cmake.Activator
+Bundle-Vendor: jnmoore
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ de.marw.cdt.cmake.core;bundle-version="1.1.0",
+ org.eclipse.core.resources,
+ org.eclipse.cdt.core
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Import-Package: 
+ org.eclipse.cdt.managedbuilder.core,
+ org.eclipse.cdt.managedbuilder.makegen
+Export-Package: jnmoore.cmake
